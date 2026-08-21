@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
+    "dev": "node init && tsx watch src/server.ts",
+    "build": "node init && tsc",
+    "start": "node init && node dist/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^5.1.0",
     "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
     "ollama": "^0.5.17",
     "pdf-parse": "1.1.1",
     "pg": "^8.16.3"
@@ -21,6 +22,7 @@
     "@types/express": "^5.0.3",
     "@types/multer": "^2.0.0",
     "@types/node": "^24.3.0",
+    "@types/pdf-parse": "^1.1.5",
     "@types/pg": "^8.15.5",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
